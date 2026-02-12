@@ -63,7 +63,7 @@ a:hover {
 
 /* Header & Banner */
 .site-header {
-  background-color: var(--deep-blue);
+  background-color: transparent;
   border-bottom: 2px solid var(--border-color);
   padding: 2em 2em;
   margin-bottom: 2em;
@@ -110,6 +110,7 @@ a:hover {
   display: flex;
   gap: 2em;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .main-navigation a {
@@ -152,6 +153,8 @@ a:hover {
 /* Main Content */
 .main-content {
   min-height: 400px;
+  background-color: var(--deep-blue);
+  padding: 2em;
 }
 
 article {
@@ -366,6 +369,10 @@ article:last-child {
   .site-content {
     grid-template-columns: 1fr;
     gap: 1.5em;
+  }
+
+  .main-content {
+    order: -1;
   }
 
   .sidebar-left,
