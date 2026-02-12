@@ -63,7 +63,7 @@ a:hover {
 
 /* Header & Banner */
 .site-header {
-  background-color: var(--deep-blue);
+  background-color: transparent;
   border-bottom: 2px solid var(--border-color);
   padding: 2em 2em;
   margin-bottom: 2em;
@@ -110,6 +110,7 @@ a:hover {
   display: flex;
   gap: 2em;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .main-navigation a {
@@ -152,6 +153,8 @@ a:hover {
 /* Main Content */
 .main-content {
   min-height: 400px;
+  background-color: var(--deep-blue);
+  padding: 2em;
 }
 
 article {
@@ -368,6 +371,10 @@ article:last-child {
     gap: 1.5em;
   }
 
+  .main-content {
+    order: -1;
+  }
+
   .sidebar-left,
   .sidebar-right {
     order: initial;
@@ -407,6 +414,19 @@ article:last-child {
 }
 
 /* Utility Classes */
+input[type="text"],
+input[type="email"],
+input[type="url"],
+textarea {
+  width: 100%;
+  max-width: 100%;
+  background-color: var(--dark-void);
+  border: 1px solid var(--border-color);
+  color: var(--bright-text);
+  padding: 0.5em;
+  font-family: inherit;
+}
+
 .screen-reader-text {
   position: absolute;
   width: 1px;
