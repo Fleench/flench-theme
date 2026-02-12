@@ -1,0 +1,420 @@
+/*
+Theme Name: Void
+Theme URI: https://example.com
+Description: A minimal indie theme with retro space aesthetic
+Version: 1.0
+Author: Your Name
+Text Domain: void-theme
+Domain Path: /languages
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --dark-void: #0a0e27;
+  --deep-blue: #1a1f3a;
+  --accent-blue: #4a7c9e;
+  --bright-text: #e8eef7;
+  --dim-text: #a0aac0;
+  --border-color: #2a3050;
+}
+
+html, body {
+  background-color: var(--dark-void);
+  color: var(--bright-text);
+  font-family: 'Georgia', serif;
+  font-size: 16px;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Courier New', monospace;
+  margin: 1.5em 0 0.5em 0;
+  color: var(--bright-text);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: normal;
+}
+
+h1 { font-size: 2.5em; }
+h2 { font-size: 2em; }
+h3 { font-size: 1.5em; }
+h4 { font-size: 1.25em; }
+
+p {
+  margin-bottom: 1em;
+}
+
+a {
+  color: var(--accent-blue);
+  text-decoration: underline;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--bright-text);
+}
+
+/* Header & Banner */
+.site-header {
+  background-color: var(--deep-blue);
+  border-bottom: 2px solid var(--border-color);
+  padding: 2em 2em;
+  margin-bottom: 2em;
+}
+
+.site-branding {
+  margin-bottom: 1em;
+}
+
+.site-title {
+  font-family: 'Courier New', monospace;
+  font-size: 2.5em;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin: 0;
+  color: var(--bright-text);
+}
+
+.site-title a {
+  color: var(--bright-text);
+  text-decoration: none;
+}
+
+.site-title a:hover {
+  color: var(--accent-blue);
+}
+
+.site-description {
+  color: var(--dim-text);
+  font-style: italic;
+  font-size: 0.95em;
+  margin-top: 0.5em;
+}
+
+/* Navigation */
+.main-navigation {
+  margin-top: 1.5em;
+  border-top: 1px solid var(--border-color);
+  padding-top: 1em;
+}
+
+.main-navigation ul {
+  list-style: none;
+  display: flex;
+  gap: 2em;
+  flex-wrap: wrap;
+}
+
+.main-navigation a {
+  color: var(--accent-blue);
+  text-decoration: none;
+  font-family: 'Courier New', monospace;
+  text-transform: uppercase;
+  font-size: 0.9em;
+  letter-spacing: 1px;
+  transition: color 0.2s ease;
+}
+
+.main-navigation a:hover {
+  color: var(--bright-text);
+  text-decoration: underline;
+}
+
+/* Main Layout */
+.site-content {
+  display: grid;
+  grid-template-columns: 250px 1fr 280px;
+  gap: 2em;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2em 2em 2em;
+}
+
+/* Left Sidebar - Comments */
+.sidebar-left {
+  order: -1;
+}
+
+.sidebar-left h3 {
+  margin-top: 0;
+  font-size: 1.2em;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 0.5em;
+}
+
+/* Main Content */
+.main-content {
+  min-height: 400px;
+}
+
+article {
+  margin-bottom: 3em;
+  padding-bottom: 2em;
+  border-bottom: 1px solid var(--border-color);
+}
+
+article:last-child {
+  border-bottom: none;
+}
+
+.post-title {
+  margin-top: 0;
+}
+
+.post-meta {
+  color: var(--dim-text);
+  font-size: 0.9em;
+  margin-bottom: 1.5em;
+  font-family: 'Courier New', monospace;
+}
+
+.post-content {
+  margin-bottom: 1.5em;
+}
+
+.post-content p {
+  margin-bottom: 1em;
+}
+
+.post-content img {
+  max-width: 100%;
+  height: auto;
+  margin: 1.5em 0;
+  border: 1px solid var(--border-color);
+}
+
+.post-footer {
+  margin-top: 2em;
+  padding-top: 1em;
+  border-top: 1px solid var(--border-color);
+  color: var(--dim-text);
+  font-size: 0.9em;
+}
+
+/* Right Sidebar - Author & Related */
+.sidebar-right {
+  position: sticky;
+  top: 2em;
+  height: fit-content;
+}
+
+.sidebar-right-section {
+  background-color: var(--deep-blue);
+  border: 1px solid var(--border-color);
+  padding: 1.5em;
+  margin-bottom: 2em;
+}
+
+.sidebar-right-section h3 {
+  margin-top: 0;
+  font-size: 1.1em;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 0.5em;
+}
+
+.author-info {
+  text-align: center;
+}
+
+.author-avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin: 0 auto 1em;
+  border: 2px solid var(--accent-blue);
+}
+
+.author-name {
+  font-family: 'Courier New', monospace;
+  font-size: 1.1em;
+  margin: 0.5em 0;
+  text-transform: uppercase;
+}
+
+.author-bio {
+  font-size: 0.9em;
+  color: var(--dim-text);
+  line-height: 1.5;
+}
+
+.author-links {
+  margin-top: 1em;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
+.author-links a {
+  display: inline-block;
+  padding: 0.5em 1em;
+  background-color: var(--dark-void);
+  border: 1px solid var(--accent-blue);
+  text-decoration: none;
+  font-family: 'Courier New', monospace;
+  font-size: 0.85em;
+  text-align: center;
+  transition: all 0.2s ease;
+}
+
+.author-links a:hover {
+  background-color: var(--accent-blue);
+  color: var(--dark-void);
+}
+
+.related-posts {
+  list-style: none;
+}
+
+.related-posts li {
+  margin-bottom: 1em;
+  padding-bottom: 1em;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.related-posts li:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.related-posts a {
+  display: block;
+  font-size: 0.95em;
+  line-height: 1.4;
+}
+
+.related-post-date {
+  display: block;
+  font-size: 0.85em;
+  color: var(--dim-text);
+  margin-top: 0.3em;
+  font-family: 'Courier New', monospace;
+}
+
+/* Comments Section */
+#comments {
+  margin-top: 2em;
+  padding-top: 2em;
+  border-top: 1px solid var(--border-color);
+}
+
+.comments-title {
+  font-size: 1.2em;
+}
+
+.comment-list {
+  list-style: none;
+  margin-top: 1.5em;
+}
+
+.comment {
+  margin-bottom: 1.5em;
+  padding: 1em;
+  background-color: var(--deep-blue);
+  border-left: 2px solid var(--accent-blue);
+}
+
+.comment-author {
+  font-family: 'Courier New', monospace;
+  font-size: 0.95em;
+  margin-bottom: 0.5em;
+}
+
+.comment-author cite {
+  color: var(--accent-blue);
+  font-style: normal;
+}
+
+.comment-date {
+  font-size: 0.85em;
+  color: var(--dim-text);
+}
+
+.comment-content {
+  margin-top: 0.5em;
+  color: var(--bright-text);
+}
+
+.comment-content p {
+  margin-bottom: 0.5em;
+}
+
+/* Footer */
+.site-footer {
+  background-color: var(--deep-blue);
+  border-top: 2px solid var(--border-color);
+  padding: 2em;
+  margin-top: 3em;
+  text-align: center;
+  color: var(--dim-text);
+  font-size: 0.9em;
+}
+
+.site-footer a {
+  color: var(--accent-blue);
+}
+
+/* Mobile Responsive */
+@media (max-width: 1024px) {
+  .site-content {
+    grid-template-columns: 1fr;
+    gap: 1.5em;
+  }
+
+  .sidebar-left,
+  .sidebar-right {
+    order: initial;
+  }
+
+  .sidebar-right {
+    position: static;
+  }
+
+  .main-navigation ul {
+    gap: 1em;
+  }
+}
+
+@media (max-width: 768px) {
+  .site-header {
+    padding: 1.5em 1em;
+    margin-bottom: 1.5em;
+  }
+
+  .site-title {
+    font-size: 1.8em;
+  }
+
+  .site-content {
+    padding: 0 1em 1.5em 1em;
+    gap: 1em;
+  }
+
+  .main-navigation ul {
+    flex-direction: column;
+    gap: 0.5em;
+  }
+
+  h1 { font-size: 1.8em; }
+  h2 { font-size: 1.4em; }
+}
+
+/* Utility Classes */
+.screen-reader-text {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
