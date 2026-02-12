@@ -8,7 +8,14 @@ get_header();
 
 	<!-- LEFT SIDEBAR: COMMENTS -->
 	<aside class="sidebar-left">
-		<!-- Sidebar left content moved to main content -->
+		<?php
+		if ( is_singular() && comments_open() ) {
+			?>
+			<h3><?php _e( 'Discussion', 'void-theme' ); ?></h3>
+			<?php comments_template(); ?>
+			<?php
+		}
+		?>
 	</aside>
 
 	<!-- MAIN CONTENT -->
@@ -70,14 +77,6 @@ get_header();
 							?>
 						</footer>
 						<?php
-						if ( comments_open() ) {
-							?>
-							<div id="comments-section">
-								<h3><?php _e( 'Discussion', 'void-theme' ); ?></h3>
-								<?php comments_template(); ?>
-							</div>
-							<?php
-						}
 					}
 					?>
 				</article>
